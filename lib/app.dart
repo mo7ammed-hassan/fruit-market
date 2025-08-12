@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/config/routing/app_router.dart';
+import 'package:fruit_market/core/theme/app_theme.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({
@@ -14,6 +15,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      themeMode: ThemeMode.light,
       onGenerateRoute: (settings) => appRouter.generateRoute(settings),
       initialRoute: initialRoute,
     );

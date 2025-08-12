@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
-  AppImages._();
+  const AppImages._();
   
   /// Assets for iconsCanceled
   /// assets/icons/canceled.svg
