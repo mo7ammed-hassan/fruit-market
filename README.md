@@ -37,7 +37,7 @@ Fruit Market — explore seasonal and exotic fruits, add them to your cart, sele
 ### Installation
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/mo7ammed-hassan/fruit-market.git>
 cd fruit_market
 flutter pub get
 flutter run
@@ -54,10 +54,10 @@ flutter run
 ```
 /lib
   /core
+  / config
   /features
   /presentation
   /data
-  /domain
 /tests
 ```
 
