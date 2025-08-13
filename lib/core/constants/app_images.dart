@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
   const AppImages._();
-  
+
   /// Assets for iconsCanceled
   /// assets/icons/canceled.svg
   static const String iconsCanceled = "assets/icons/canceled.svg";
@@ -91,8 +91,8 @@ class AppImages {
   static const String imagesBasket = "assets/images/basket.svg";
 
   /// Assets for imagesBottomSplash
-  /// assets/images/bottom_splash.svg
-  static const String imagesBottomSplash = "assets/images/bottom_splash.svg";
+  /// assets/images/bottom_splash.png
+  static const String imagesBottomSplash = "assets/images/bottom_splash.png";
 
   /// Assets for imagesCategory1
   /// assets/images/category_1.svg
@@ -116,11 +116,13 @@ class AppImages {
 
   /// Assets for imagesPaymentFailure
   /// assets/images/payment_failure.svg
-  static const String imagesPaymentFailure = "assets/images/payment_failure.svg";
+  static const String imagesPaymentFailure =
+      "assets/images/payment_failure.svg";
 
   /// Assets for imagesPaymentSuccess
   /// assets/images/payment_success.svg
-  static const String imagesPaymentSuccess = "assets/images/payment_success.svg";
+  static const String imagesPaymentSuccess =
+      "assets/images/payment_success.svg";
 
   /// Assets for imagesProductImage
   /// assets/images/product_image.png
@@ -130,4 +132,3 @@ class AppImages {
   /// assets/images/saller_image.svg
   static const String imagesSallerImage = "assets/images/saller_image.svg";
 }
-
