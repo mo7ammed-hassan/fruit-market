@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/config/routing/app_router.dart';
 import 'package:fruit_market/core/constants/app_colors.dart';
 import 'package:fruit_market/core/constants/app_images.dart';
-import 'package:fruit_market/config/routing/routes.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,9 +17,13 @@ class _SplashScreenState extends State<SplashScreen>
   late Animation<Offset> _logoSlide;
   late Animation<Offset> _bottomSlide;
 
+  late Future<String> _routeFuture;
+
   @override
   void initState() {
     super.initState();
+
+    _routeFuture = AppRouter.getInitialRoute();
 
     _controller = AnimationController(
       vsync: this,
@@ -42,11 +46,12 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    _controller.addStatusListener((status) {
+    _controller.addStatusListener((status) async {
       if (status == AnimationStatus.completed && mounted) {
+        final secoundRoute = await _routeFuture;
         Future.delayed(const Duration(milliseconds: 650), () {
           if (mounted) {
-            Navigator.pushReplacementNamed(context, Routes.onboardingScreen);
+            Navigator.pushReplacementNamed(context, secoundRoute);
           }
         });
       }
