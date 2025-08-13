@@ -15,7 +15,7 @@ class OnbboardingPageView extends StatelessWidget {
       builder: (context, state) {
         return PageView.builder(
           controller: cubit.pageController,
-          onPageChanged: cubit.changePage,
+          onPageChanged: (index) => cubit.changePage(index),
           itemCount: cubit.totalPages,
           itemBuilder: (context, index) {
             final pageData = cubit.onboardingPages[index];

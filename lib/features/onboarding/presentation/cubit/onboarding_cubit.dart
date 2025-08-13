@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_market/config/service_locator.dart';
 import 'package:fruit_market/core/constants/app_images.dart';
 import 'package:fruit_market/core/constants/app_strings.dart';
+import 'package:fruit_market/core/constants/constants_keys.dart';
+import 'package:fruit_market/core/services/app_storage.dart';
 import 'package:fruit_market/features/onboarding/models/onboarding_page_data_model.dart';
 
 class OnboardingCubit extends Cubit<int> {
@@ -43,7 +46,7 @@ class OnboardingCubit extends Cubit<int> {
     _isManualScroll = false;
     if (isLastPage) {
       emit(totalPages);
-      //await getIt<AppStorage>().setBool(kOnBoardingShown, true);
+      await getIt<AppStorage>().setBool(kOnBoardingShown, true);
       return;
     }
 

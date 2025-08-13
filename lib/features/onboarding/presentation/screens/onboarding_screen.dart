@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_market/config/routing/routes.dart';
 import 'package:fruit_market/core/constants/app_colors.dart';
 import 'package:fruit_market/core/constants/app_strings.dart';
+import 'package:fruit_market/core/utils/device/extensions/navigation_extension.dart';
 import 'package:fruit_market/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:fruit_market/features/onboarding/presentation/widgets/onbboarding_page_view.dart';
 import 'package:fruit_market/features/onboarding/presentation/widgets/onboarding_dots_indicator.dart';
@@ -19,7 +21,7 @@ class OnboardingScreen extends StatelessWidget {
         listener: (context, state) {
           final cubit = context.read<OnboardingCubit>();
           if (cubit.hasCompletedOnboarding) {
-            // context.pushNamedAndRemoveUntilPage(Routes.loginScreen);
+            context.pushAndRemovePages(Routes.loginScreen);
           }
         },
         child: Scaffold(

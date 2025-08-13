@@ -9,7 +9,7 @@ class CustomTextTheme {
     headlineMedium: const TextStyle().copyWith(fontWeight: FontWeight.bold),
     titleLarge: const TextStyle().copyWith(fontWeight: FontWeight.w700),
     bodyLarge: const TextStyle().copyWith(
-      fontSize: 17.0,
+      fontSize: 16.0,
       color: Color(0xFF78787C),
     ),
 
