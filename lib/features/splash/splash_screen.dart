@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed && mounted) {
-        Future.delayed(const Duration(milliseconds: 800), () {
+        Future.delayed(const Duration(milliseconds: 650), () {
           if (mounted) {
             Navigator.pushReplacementNamed(context, Routes.onboardingScreen);
           }
