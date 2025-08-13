@@ -2,6 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_market/config/routing/routes.dart';
+import 'package:fruit_market/config/service_locator.dart';
+import 'package:fruit_market/core/constants/constants_keys.dart';
+import 'package:fruit_market/core/services/app_storage.dart';
+import 'package:fruit_market/features/auth/presentation/screens/login_screen.dart';
 import 'package:fruit_market/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:fruit_market/features/splash/splash_screen.dart';
 
@@ -13,8 +17,8 @@ class AppRouter {
     Routes.splashScreen: (_) => const SplashScreen(),
     Routes.onboardingScreen: (_) => const OnboardingScreen(),
 
-    // /// --- Auth Screen ---
-    // Routes.loginScreen: (_) => const LoginScreen(),
+    /// --- Auth Screen ---
+    Routes.loginScreen: (_) => const LoginScreen(),
     // Routes.signupScreen: (_) => const SignupScreen(),
     // Routes.resetPasswordScreen: (_) => BlocProvider(
     //   create: (context) => ResetPasswordCubit(),
@@ -53,19 +57,18 @@ class AppRouter {
   };
 
   static Future<String> getInitialRoute() async {
-    // final secureStorage = getIt.get<SecureStorage>();
-    // final appStorage = getIt<AppStorage>();
+    //final secureStorage = getIt.get<SecureStorage>();
+    final appStorage = getIt<AppStorage>();
 
-    // bool? onBoardingShown = appStorage.getBool(kOnBoardingShown);
-    // final accessToken = await secureStorage.getAccessToken();
+    bool? onBoardingShown = appStorage.getBool(kOnBoardingShown);
+    //final accessToken = await secureStorage.getAccessToken();
 
-    // if (!onBoardingShown) {
-    //   return Routes.onboardingScreen;
-    // } else {
-    //   return accessToken != null ? Routes.navigationScreen : Routes.loginScreen;
-    // }
-
-    return Routes.onboardingScreen;
+    if (!onBoardingShown) {
+      return Routes.onboardingScreen;
+    } else {
+      //return accessToken != null ? Routes.navigationScreen : Routes.loginScreen;
+      return Routes.loginScreen;
+    }
   }
 
   Route<dynamic>? generateRoute(RouteSettings settings) {
