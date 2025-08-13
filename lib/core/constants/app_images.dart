@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
-  const AppImages._();
-
+  AppImages._();
+  
   /// Assets for iconsCanceled
   /// assets/icons/canceled.svg
   static const String iconsCanceled = "assets/icons/canceled.svg";
@@ -22,9 +22,17 @@ class AppImages {
   /// assets/icons/delivering.svg
   static const String iconsDelivering = "assets/icons/delivering.svg";
 
+  /// Assets for iconsFacebook
+  /// assets/icons/facebook.svg
+  static const String iconsFacebook = "assets/icons/facebook.svg";
+
   /// Assets for iconsFinished
   /// assets/icons/finished.svg
   static const String iconsFinished = "assets/icons/finished.svg";
+
+  /// Assets for iconsGoogle
+  /// assets/icons/google.svg
+  static const String iconsGoogle = "assets/icons/google.svg";
 
   /// Assets for iconsHeart
   /// assets/icons/heart.svg
@@ -114,15 +122,17 @@ class AppImages {
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
 
+  /// Assets for imagesOnboarding
+  /// assets/images/onboarding.jpg
+  static const String imagesOnboarding = "assets/images/onboarding.jpg";
+
   /// Assets for imagesPaymentFailure
   /// assets/images/payment_failure.svg
-  static const String imagesPaymentFailure =
-      "assets/images/payment_failure.svg";
+  static const String imagesPaymentFailure = "assets/images/payment_failure.svg";
 
   /// Assets for imagesPaymentSuccess
   /// assets/images/payment_success.svg
-  static const String imagesPaymentSuccess =
-      "assets/images/payment_success.svg";
+  static const String imagesPaymentSuccess = "assets/images/payment_success.svg";
 
   /// Assets for imagesProductImage
   /// assets/images/product_image.png
@@ -131,8 +141,5 @@ class AppImages {
   /// Assets for imagesSallerImage
   /// assets/images/saller_image.svg
   static const String imagesSallerImage = "assets/images/saller_image.svg";
-
-  /// Assets for imagesOnboarding
-  /// assets/images/onboarding.jpg
-  static const String imagesOnboarding = 'assets/images/onboarding.jpg';
 }
+

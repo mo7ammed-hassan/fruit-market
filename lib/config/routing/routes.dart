@@ -2,6 +2,8 @@ class Routes {
   /// --- Welcome Screens --- ///
   static const String splashScreen = '/splashScreen';
   static const String onboardingScreen = '/onboardingScreen';
+  static const String welcomeScreen = '/welcomeScreen';
+
 
   /// --- Auth Screens --- ///
   static const String loginScreen = '/loginScreen';

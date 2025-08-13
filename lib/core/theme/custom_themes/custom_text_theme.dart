@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/core/constants/app_colors.dart';
 
 class CustomTextTheme {
   CustomTextTheme._();
 
   static TextTheme lightTextTheme = TextTheme(
-    headlineLarge: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    headlineLarge: const TextStyle().copyWith(
+      fontWeight: FontWeight.bold,
+      color: AppColors.primaryColor,
+    ),
 
     headlineMedium: const TextStyle().copyWith(fontWeight: FontWeight.bold),
     titleLarge: const TextStyle().copyWith(fontWeight: FontWeight.w700),

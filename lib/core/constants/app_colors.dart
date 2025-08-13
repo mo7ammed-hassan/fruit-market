@@ -26,4 +26,6 @@ class AppColors {
   static const lightCyan = Color(0xFF9CE2FF);
 
   static const onboardingColor = Color(0xFFF7F7F7);
+
+  static const termsColor = Color(0xFF88909C);
 }

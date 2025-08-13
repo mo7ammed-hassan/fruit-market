@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/core/theme/custom_themes/custom_input_decoration_theme.dart';
 import 'package:fruit_market/core/theme/custom_themes/custom_text_theme.dart';
 import 'package:fruit_market/core/theme/custom_themes/eleveted_button_theme.dart';
 
@@ -14,6 +15,7 @@ class AppTheme {
     primaryColorLight: Colors.white,
     elevatedButtonTheme: CustomElevetedButtonTheme.lightElevetedButtonTheme,
     textTheme: CustomTextTheme.lightTextTheme,
+    inputDecorationTheme: CustomInputDecorationTheme.lightInputDecorationTheme,
 
     pageTransitionsTheme: PageTransitionsTheme(
       builders: {
