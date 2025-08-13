@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/core/theme/custom_themes/custom_text_theme.dart';
+import 'package:fruit_market/core/theme/custom_themes/eleveted_button_theme.dart';
 
 class AppTheme {
   const AppTheme._();
@@ -10,6 +12,8 @@ class AppTheme {
     primaryColor: Colors.white,
     scaffoldBackgroundColor: Colors.white,
     primaryColorLight: Colors.white,
+    elevatedButtonTheme: CustomElevetedButtonTheme.lightElevetedButtonTheme,
+    textTheme: CustomTextTheme.lightTextTheme,
 
     pageTransitionsTheme: PageTransitionsTheme(
       builders: {

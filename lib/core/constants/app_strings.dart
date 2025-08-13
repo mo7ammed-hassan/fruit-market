@@ -1,0 +1,25 @@
+class AppStrings {
+  const AppStrings._();
+
+  static const String appName = 'Fruit Market';
+
+  static const String skip = 'Skip';
+  static const String next = 'Next';
+  static const String getStarted = 'Get Started';
+  static const String alreadyMember = 'Already member';
+
+  static const String login = 'Login';
+  static const String signup = 'Sign Up';
+  static const String submit = 'Submit';
+  static const String confirm = 'confirm';
+
+  static const String onboardingTitle1 = 'E Shopping';
+  static const String onboardingSubTitle1 =
+      'Explore op organic fruits & grab them';
+
+  static const String onboardingTitle2 = 'Delivery Arrived';
+  static const String onboardingSubTitle12 = 'Order is arrived at your Place';
+
+  static const String onboardingTitle3 = 'Delivery Arrived';
+  static const String onboardingSubTitle3 = 'Order is arrived at your Place';
+}

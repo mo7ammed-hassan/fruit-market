@@ -131,4 +131,8 @@ class AppImages {
   /// Assets for imagesSallerImage
   /// assets/images/saller_image.svg
   static const String imagesSallerImage = "assets/images/saller_image.svg";
+
+  /// Assets for imagesOnboarding
+  /// assets/images/onboarding.jpg
+  static const String imagesOnboarding = 'assets/images/onboarding.jpg';
 }
