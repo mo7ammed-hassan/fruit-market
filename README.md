@@ -2,7 +2,7 @@
 
 Fruit Market is a Flutter app for browsing, ordering, and receiving fresh, locally-sourced fruits. Designed with clean architecture to ensure scalability, testability, and maintainability.
 
-## Description (GitHub)
+## Description
 
 Fruit Market — explore seasonal and exotic fruits, add them to your cart, select delivery slots, and make secure payments. Built as a modern, user-friendly shopping experience with clean code and modular components.
 
