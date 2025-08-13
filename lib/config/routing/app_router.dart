@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_market/config/routing/routes.dart';
+import 'package:fruit_market/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:fruit_market/features/splash/splash_screen.dart';
 
 class AppRouter {
@@ -10,7 +11,7 @@ class AppRouter {
   static final Map<String, Widget Function(BuildContext)> _routes = {
     /// --- Welcome Screen ---
     Routes.splashScreen: (_) => const SplashScreen(),
-    //Routes.onboardingScreen: (_) => const OnboardingScreen(),
+    Routes.onboardingScreen: (_) => const OnboardingScreen(),
 
     // /// --- Auth Screen ---
     // Routes.loginScreen: (_) => const LoginScreen(),
@@ -64,7 +65,7 @@ class AppRouter {
     //   return accessToken != null ? Routes.navigationScreen : Routes.loginScreen;
     // }
 
-    return Routes.splashScreen;
+    return Routes.onboardingScreen;
   }
 
   Route<dynamic>? generateRoute(RouteSettings settings) {
