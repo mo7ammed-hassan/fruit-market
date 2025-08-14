@@ -28,7 +28,7 @@ class WelcomeScreen extends StatelessWidget {
           AuthOptionCard(
             text: AppStrings.signInWGoogle,
             iconUrl: AppImages.iconsGoogle,
-            onTap: () => context.push(Routes.loginScreen),
+            onTap: () {},
           ),
           const SizedBox(height: AppSizes.authSpaceItem),
 
@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
       switchData: AuthSwitchData(
         title: AppStrings.alreadyMember,
         actionText: AppStrings.signIn,
-        onActionTap: () {},
+        onActionTap: () => context.push(Routes.loginScreen),
       ),
 
       footer: Text.rich(
