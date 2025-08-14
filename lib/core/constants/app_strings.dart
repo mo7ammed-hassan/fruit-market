@@ -35,4 +35,5 @@ class AppStrings {
   static const String password = 'Password';
   static const String mobileNumber = 'Mobile Number';
   static const String forgetPassword = 'Forget Password?';
+
 }

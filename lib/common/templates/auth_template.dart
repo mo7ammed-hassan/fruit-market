@@ -16,6 +16,7 @@ import 'package:fruit_market/core/utils/device/extensions/navigation_extension.d
 /// - Main content area (e.g., form fields, options)
 /// - Optional AuthSwitchText (login/register switch)
 /// - Optional footer widget (e.g., terms and conditions)
+/// - **Configurable spacing** between main content and switch text via [spaceAfterContent].
 ///
 /// By using [AuthTemplate], you can keep a consistent design across
 /// multiple authentication screens while customizing only the unique parts.
@@ -34,7 +35,7 @@ import 'package:fruit_market/core/utils/device/extensions/navigation_extension.d
 /// )
 /// ```
 ///
-/// See also:
+/// ### Related:
 ///  * [AuthSwitchData], for configuring the login/register switch text.
 ///  * [AuthSwitchText], the widget that displays the switch link.
 ///
@@ -79,6 +80,9 @@ class AuthTemplate extends StatelessWidget {
   /// Defaults to [Icons.arrow_back_ios_new] if `null`.
   final IconData? backIcon;
 
+  /// Height factor (relative to screen height) for spacing after [content].
+  ///
+  /// Defaults to `0.075` (7.5% of the screen height).
   final double spaceAfterContent;
 
   @override
