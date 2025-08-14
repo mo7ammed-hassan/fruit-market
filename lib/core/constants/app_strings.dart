@@ -8,6 +8,7 @@ class AppStrings {
   static const String next = 'Next';
   static const String getStarted = 'Get Started';
   static const String alreadyMember = 'Already member? ';
+  static const String dontHaveAccount = 'Don’t have an account? ';
 
   static const String login = 'Login';
   static const String signIn = 'Sign In';
@@ -30,4 +31,8 @@ class AppStrings {
   static const String signInWPhone = 'Sign in with Phone Number';
   static const String signInWGoogle = 'Sign in with Google';
   static const String signInWFacebook = 'Sign in with Facebook';
+
+  static const String password = 'Password';
+  static const String mobileNumber = 'Mobile Number';
+  static const String forgetPassword = 'Forget Password?';
 }

@@ -11,6 +11,8 @@ class CustomTextTheme {
     ),
 
     headlineMedium: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    headlineSmall: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+
     titleLarge: const TextStyle().copyWith(fontWeight: FontWeight.w700),
     bodyLarge: const TextStyle().copyWith(
       fontSize: 16.0,

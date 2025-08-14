@@ -10,11 +10,12 @@ class AuthOptionCard extends StatelessWidget {
     required this.text,
     this.iconColor,
     this.onTap,
-    this.backgroundColor,
+    this.backgroundColor, this.textColor,
   });
 
   final String? iconUrl;
   final String text;
+  final Color? textColor;
   final Color? iconColor;
   final Color? backgroundColor;
   final void Function()? onTap;
@@ -38,7 +39,7 @@ class AuthOptionCard extends StatelessWidget {
                 text,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: textColor ?? Colors.black),
               ),
             ),
           ],

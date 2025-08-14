@@ -15,7 +15,7 @@ class AppNameWidget extends StatelessWidget {
             text: AppStrings.appName[0],
             style: Theme.of(
               context,
-            ).textTheme.headlineLarge?.copyWith(fontSize: 51),
+            ).textTheme.headlineLarge?.copyWith(fontSize: 48),
           ),
           TextSpan(
             text: AppStrings.appName.substring(1),
