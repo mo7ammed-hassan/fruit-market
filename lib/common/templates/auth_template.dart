@@ -50,6 +50,7 @@ class AuthTemplate extends StatelessWidget {
     this.showBack = true,
     this.switchData,
     this.backIcon,
+    this.spaceAfterContent = 0.075,
   });
 
   /// The title displayed below the [AppNameWidget].
@@ -77,6 +78,8 @@ class AuthTemplate extends StatelessWidget {
   ///
   /// Defaults to [Icons.arrow_back_ios_new] if `null`.
   final IconData? backIcon;
+
+  final double spaceAfterContent;
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +124,9 @@ class AuthTemplate extends StatelessWidget {
 
                 // Screen-specific content
                 content,
-                SizedBox(height: DeviceUtils.screenHeight(context) * 0.075),
+                SizedBox(
+                  height: DeviceUtils.screenHeight(context) * spaceAfterContent,
+                ),
 
                 // Auth switch text like(Sign in / Sign up)
                 if (switchData != null) AuthSwitchText(data: switchData!),
