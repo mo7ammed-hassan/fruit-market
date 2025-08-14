@@ -52,6 +52,7 @@ class AuthTemplate extends StatelessWidget {
     this.switchData,
     this.backIcon,
     this.spaceAfterContent = 0.075,
+    this.backSceenRoute,
   });
 
   /// The title displayed below the [AppNameWidget].
@@ -85,6 +86,8 @@ class AuthTemplate extends StatelessWidget {
   /// Defaults to `0.075` (7.5% of the screen height).
   final double spaceAfterContent;
 
+  final String? backSceenRoute;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,7 +104,10 @@ class AuthTemplate extends StatelessWidget {
               child: Align(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  onPressed: () => context.pop(),
+                  onPressed: () => backSceenRoute != null
+                      ? context.pushReplacement(backSceenRoute!)
+                      : null,
+
                   icon: Icon(
                     backIcon ?? Icons.arrow_back_ios_new,
                     color: Colors.black,

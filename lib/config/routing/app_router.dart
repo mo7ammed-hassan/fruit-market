@@ -6,6 +6,7 @@ import 'package:fruit_market/config/service_locator.dart';
 import 'package:fruit_market/core/constants/constants_keys.dart';
 import 'package:fruit_market/core/services/app_storage.dart';
 import 'package:fruit_market/features/auth/presentation/screens/login_screen.dart';
+import 'package:fruit_market/features/auth/presentation/screens/signup_screen.dart';
 import 'package:fruit_market/features/auth/presentation/screens/welcome_screen.dart';
 import 'package:fruit_market/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:fruit_market/features/splash/splash_screen.dart';
@@ -22,7 +23,7 @@ class AppRouter {
 
     /// --- Auth Screen ---
     Routes.loginScreen: (_) => const LoginScreen(),
-    // Routes.signupScreen: (_) => const SignupScreen(),
+    Routes.signupScreen: (_) => const SignupScreen(),
     // Routes.resetPasswordScreen: (_) => BlocProvider(
     //   create: (context) => ResetPasswordCubit(),
     //   child: const ResetPasswordScreen(),

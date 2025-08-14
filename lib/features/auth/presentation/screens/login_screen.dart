@@ -3,10 +3,12 @@ import 'package:fruit_market/common/templates/auth_template.dart';
 import 'package:fruit_market/common/widgets/auth_elevated_button.dart';
 import 'package:fruit_market/common/widgets/custom_text_form_field.dart';
 import 'package:fruit_market/common/widgets/phone_number_field.dart';
+import 'package:fruit_market/config/routing/routes.dart';
 import 'package:fruit_market/core/constants/app_colors.dart';
 import 'package:fruit_market/core/constants/app_sizes.dart';
 import 'package:fruit_market/core/constants/app_strings.dart';
 import 'package:fruit_market/core/models/auth_switch_data.dart';
+import 'package:fruit_market/core/utils/device/extensions/navigation_extension.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -15,12 +17,16 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AuthTemplate(
       title: AppStrings.login,
+      backSceenRoute: Routes.welcomeScreen,
       content: Column(
         children: [
           const PhoneInputWithAutoCountry(title: AppStrings.mobileNumber),
           const SizedBox(height: AppSizes.authSpaceItem),
 
-          const CustomTextFormField(title: AppStrings.password),
+          const CustomTextFormField(
+            title: AppStrings.password,
+            hintText: AppStrings.password,
+          ),
           const SizedBox(height: AppSizes.authSpaceItem / 2),
 
           Align(
@@ -44,7 +50,7 @@ class LoginScreen extends StatelessWidget {
       switchData: AuthSwitchData(
         title: AppStrings.dontHaveAccount,
         actionText: AppStrings.signup,
-        onActionTap: () {},
+        onActionTap: () => context.pushReplacement(Routes.signupScreen),
       ),
 
       spaceAfterContent: 0.04,
