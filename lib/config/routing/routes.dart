@@ -9,6 +9,8 @@ class Routes {
   /// --- Auth Screens --- ///
   static const String loginScreen = '/loginScreen';
   static const String signupScreen = '/signupScreen';
+  static const String phoneScreen = '/phoneScreen';
+
   static const String resetPasswordScreen = '/resetPasswordScreen';
   static const String forgetPasswordScreen = '/forgetPasswordScreen';
   static const String otpVerificationScreen = '/otpVerificationScreen';
