@@ -22,7 +22,7 @@ class OnboardingScreen extends StatelessWidget {
         listener: (context, state) {
           final cubit = context.read<OnboardingCubit>();
           if (cubit.hasCompletedOnboarding) {
-            context.pushAndRemovePages(Routes.loginScreen);
+            context.pushAndRemovePages(Routes.welcomeScreen);
           }
         },
         child: Scaffold(
