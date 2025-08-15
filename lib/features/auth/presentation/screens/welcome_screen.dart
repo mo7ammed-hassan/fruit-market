@@ -8,6 +8,7 @@ import 'package:fruit_market/core/constants/app_sizes.dart';
 import 'package:fruit_market/core/constants/app_strings.dart';
 import 'package:fruit_market/core/models/auth_switch_data.dart';
 import 'package:fruit_market/core/utils/device/extensions/navigation_extension.dart';
+import 'package:fruit_market/core/utils/responsive/widgets/responsive_text_span.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -17,12 +18,13 @@ class WelcomeScreen extends StatelessWidget {
     return AuthTemplate(
       title: AppStrings.welcomText,
       backIcon: Icons.close,
+      spaceBeforeContent: 0.055,
       content: Column(
         children: [
           AuthOptionCard(
             text: AppStrings.signInWPhone,
             iconUrl: AppImages.iconsPhoneIcon,
-            onTap: () {},
+            onTap: () => context.push(Routes.phoneScreen),
           ),
           const SizedBox(height: AppSizes.authSpaceItem),
 
@@ -49,33 +51,26 @@ class WelcomeScreen extends StatelessWidget {
         onActionTap: () => context.push(Routes.loginScreen),
       ),
 
-      footer: Text.rich(
+      footer: ResponsiveTextSpan(
+        text: 'By continue you agree to our ',
+        style: Theme.of(context).textTheme.bodyLarge,
         textAlign: TextAlign.center,
-        TextSpan(
-          children: [
-            TextSpan(
-              text: 'By continue you agree to our ',
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-            TextSpan(
-              text: 'Terms of service ',
-              style: Theme.of(
-                context,
-              ).textTheme.bodyLarge?.copyWith(color: AppColors.blue),
-            ),
-            TextSpan(
-              text: 'and our ',
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-
-            TextSpan(
-              text: 'Privacy Policy',
-              style: Theme.of(
-                context,
-              ).textTheme.bodyLarge?.copyWith(color: AppColors.blue),
-            ),
-          ],
-        ),
+        children: [
+          ResponsiveTextSpan(
+            text: 'Terms of service ',
+            style: Theme.of(context).textTheme.bodyLarge,
+            color: AppColors.blue,
+          ),
+          ResponsiveTextSpan(
+            text: 'and our ',
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
+          ResponsiveTextSpan(
+            text: 'Privacy Policy',
+            style: Theme.of(context).textTheme.bodyLarge,
+            color: AppColors.blue,
+          ),
+        ],
       ),
     );
   }

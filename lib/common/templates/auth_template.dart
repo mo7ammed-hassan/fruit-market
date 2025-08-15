@@ -5,6 +5,7 @@ import 'package:fruit_market/core/constants/app_sizes.dart';
 import 'package:fruit_market/core/models/auth_switch_data.dart';
 import 'package:fruit_market/core/utils/device/device_utils.dart';
 import 'package:fruit_market/core/utils/device/extensions/navigation_extension.dart';
+import 'package:fruit_market/core/utils/responsive/widgets/responsive_text.dart';
 
 /// A reusable authentication screen template widget.
 ///
@@ -52,6 +53,7 @@ class AuthTemplate extends StatelessWidget {
     this.switchData,
     this.backIcon,
     this.spaceAfterContent = 0.075,
+    this.spaceBeforeContent = 0.04,
     this.backSceenRoute,
   });
 
@@ -85,6 +87,7 @@ class AuthTemplate extends StatelessWidget {
   ///
   /// Defaults to `0.075` (7.5% of the screen height).
   final double spaceAfterContent;
+  final double spaceBeforeContent;
 
   final String? backSceenRoute;
 
@@ -115,7 +118,7 @@ class AuthTemplate extends StatelessWidget {
                 ),
               ),
             ),
-          const SizedBox(height: AppSizes.authSpaceItem * 2),
+          SizedBox(height: DeviceUtils.screenHeight(context) * 0.04),
 
           // Main content padding
           Padding(
@@ -129,8 +132,14 @@ class AuthTemplate extends StatelessWidget {
                 const SizedBox(height: AppSizes.authSpaceItem),
 
                 // Page title
-                Text(title, style: Theme.of(context).textTheme.headlineSmall),
-                SizedBox(height: DeviceUtils.screenHeight(context) * 0.055),
+                ResponsiveText(
+                  title,
+                  baseStyle: Theme.of(context).textTheme.headlineSmall,
+                ),
+                SizedBox(
+                  height:
+                      DeviceUtils.screenHeight(context) * spaceBeforeContent,
+                ),
 
                 // Screen-specific content
                 content,
