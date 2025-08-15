@@ -25,3 +25,31 @@ double getScaleFactor(BuildContext context) {
     return width / 1920; // base desktop width
   }
 }
+
+double getScaleFactorHeight(BuildContext context) {
+  double height = MediaQuery.of(context).size.height;
+
+  if (height < ScreenSizes.tabletHeight) {
+    return height / 932; // base phone height
+  } else if (height < ScreenSizes.desktopHeight) {
+    return height / 1280; // base tablet height
+  } else {
+    return height / 1080; // base desktop height
+  }
+}
+
+double getResponsiveSize(
+  BuildContext context,
+  Axis? axis,
+  double size, {
+  double minScale = 0.8,
+  double maxScale = 1.2,
+}) {
+  double scaleFactor = axis == Axis.vertical
+      ? getScaleFactorHeight(context)
+      : getScaleFactor(context);
+
+  double responsiveSize = size * scaleFactor;
+
+  return responsiveSize.clamp(size * minScale, size * maxScale);
+}
