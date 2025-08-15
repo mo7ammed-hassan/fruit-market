@@ -59,6 +59,7 @@ class CustomTextTheme {
     ),
     bodySmall: const TextStyle().copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 12),
+       color: Color(0xFF656565),
       fontWeight: FontWeight.w500,
     ),
 

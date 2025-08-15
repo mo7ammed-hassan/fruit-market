@@ -5,6 +5,7 @@ import 'package:fruit_market/common/widgets/phone_number_field.dart';
 import 'package:fruit_market/config/routing/routes.dart';
 import 'package:fruit_market/core/constants/app_sizes.dart';
 import 'package:fruit_market/core/constants/app_strings.dart';
+import 'package:fruit_market/core/utils/device/extensions/navigation_extension.dart';
 
 class PhoneScreen extends StatelessWidget {
   const PhoneScreen({super.key});
@@ -19,7 +20,10 @@ class PhoneScreen extends StatelessWidget {
           const PhoneInputWithAutoCountry(title: AppStrings.mobileNumber),
           const SizedBox(height: AppSizes.authSpaceItem * 2),
 
-          AuthElevatedButton(text: AppStrings.submit, onTap: () {}),
+          AuthElevatedButton(
+            text: AppStrings.submit,
+            onTap: () => context.push(Routes.otpVerificationScreen),
+          ),
         ],
       ),
     );

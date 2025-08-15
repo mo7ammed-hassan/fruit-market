@@ -39,4 +39,7 @@ class AppStrings {
   static const String flName = 'First and Last Name';
   static const String enterYourPhone = 'Enter your Number';
 
+  static const String otpText = 'Enter Received OTP';
+  static const String notReceived = 'Not received? ';
+  static const String sendAgain = 'Send Again';
 }

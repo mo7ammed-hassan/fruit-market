@@ -22,10 +22,11 @@ class AppColors {
   static const Color purple = Color(0xFFCD28E8);
   static const Color lightPurple = Color(0xFFF2A1FF);
 
-  static const cyan = Color(0xFF28B0E8);
-  static const lightCyan = Color(0xFF9CE2FF);
+  static const Color cyan = Color(0xFF28B0E8);
+  static const Color lightCyan = Color(0xFF9CE2FF);
 
-  static const onboardingColor = Color(0xFFF7F7F7);
+  static const Color onboardingColor = Color(0xFFF7F7F7);
+  static const Color termsColor = Color(0xFF88909C);
 
-  static const termsColor = Color(0xFF88909C);
+  static const Color otpColor = Color(0xFFF9F9F9);
 }

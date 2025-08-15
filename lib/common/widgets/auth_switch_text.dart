@@ -39,7 +39,7 @@ class AuthSwitchText extends StatelessWidget {
         children: [
           /// Static text part (e.g., "Already have an account? ")
           TextSpan(
-            text: '${data.title} |',
+            text: data.title,
             style: data.titleStyle ?? Theme.of(context).textTheme.titleMedium,
           ),
 

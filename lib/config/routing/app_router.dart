@@ -8,6 +8,7 @@ import 'package:fruit_market/core/services/app_storage.dart';
 import 'package:fruit_market/features/auth/presentation/screens/login_screen.dart';
 import 'package:fruit_market/features/auth/presentation/screens/phone_screen.dart';
 import 'package:fruit_market/features/auth/presentation/screens/signup_screen.dart';
+import 'package:fruit_market/features/auth/presentation/screens/otp_verification_screen.dart';
 import 'package:fruit_market/features/auth/presentation/screens/welcome_screen.dart';
 import 'package:fruit_market/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:fruit_market/features/splash/splash_screen.dart';
@@ -25,6 +26,8 @@ class AppRouter {
     Routes.loginScreen: (_) => const LoginScreen(),
     Routes.signupScreen: (_) => const SignupScreen(),
     Routes.phoneScreen: (_) => const PhoneScreen(),
+    Routes.otpVerificationScreen: (_) => const OtpVerificationScreen(),
+
 
     // Routes.resetPasswordScreen: (_) => BlocProvider(
     //   create: (context) => ResetPasswordCubit(),
