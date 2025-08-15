@@ -6,7 +6,7 @@ import 'package:fruit_market/core/theme/custom_themes/eleveted_button_theme.dart
 class AppTheme {
   const AppTheme._();
 
-  static ThemeData lightTheme = ThemeData(
+  static ThemeData lightTheme(BuildContext context) => ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
@@ -14,7 +14,7 @@ class AppTheme {
     scaffoldBackgroundColor: Colors.white,
     primaryColorLight: Colors.white,
     elevatedButtonTheme: CustomElevetedButtonTheme.lightElevetedButtonTheme,
-    textTheme: CustomTextTheme.lightTextTheme,
+    textTheme: CustomTextTheme.lightTextTheme(context),
     inputDecorationTheme: CustomInputDecorationTheme.lightInputDecorationTheme,
 
     pageTransitionsTheme: PageTransitionsTheme(

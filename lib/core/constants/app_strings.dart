@@ -37,5 +37,6 @@ class AppStrings {
   static const String forgetPassword = 'Forget Password?';
 
   static const String flName = 'First and Last Name';
+  static const String enterYourPhone = 'Enter your Number';
 
 }
