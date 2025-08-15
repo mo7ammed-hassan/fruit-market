@@ -4,6 +4,7 @@ import 'package:fruit_market/config/routing/routes.dart';
 import 'package:fruit_market/core/constants/app_colors.dart';
 import 'package:fruit_market/core/constants/app_strings.dart';
 import 'package:fruit_market/core/utils/device/extensions/navigation_extension.dart';
+import 'package:fruit_market/core/utils/responsive/widgets/responsive_gap.dart';
 import 'package:fruit_market/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:fruit_market/features/onboarding/presentation/widgets/onbboarding_page_view.dart';
 import 'package:fruit_market/features/onboarding/presentation/widgets/onboarding_dots_indicator.dart';
@@ -31,16 +32,16 @@ class OnboardingScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const OnboardingSkip(),
-                const Spacer(),
+                ResponsiveGap.vertical(25.0),
 
-                const Expanded(flex: 6, child: OnbboardingPageView()),
-                const Spacer(),
+                const Expanded(flex: 4, child: OnbboardingPageView()),
+                ResponsiveGap.vertical(48.0),
 
                 const OnboardingDotsIndicator(),
-                const Spacer(),
+                ResponsiveGap.vertical(80.0),
 
                 _buildNextButton(),
-                const Spacer(flex: 2),
+                Spacer(),
               ],
             ),
           ),
