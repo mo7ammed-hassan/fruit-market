@@ -18,7 +18,6 @@ class WelcomeScreen extends StatelessWidget {
     return AuthTemplate(
       title: AppStrings.welcomText,
       backIcon: Icons.close,
-      spaceBeforeContent: 0.055,
       content: Column(
         children: [
           AuthOptionCard(
@@ -72,6 +71,8 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      spaceBeforeContent: 52.0,
+      spaceAfterContent: 75.0,
     );
   }
 }

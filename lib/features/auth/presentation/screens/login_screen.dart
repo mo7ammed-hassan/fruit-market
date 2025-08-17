@@ -52,8 +52,6 @@ class LoginScreen extends StatelessWidget {
         actionText: AppStrings.signup,
         onActionTap: () => context.pushReplacement(Routes.signupScreen),
       ),
-
-      spaceAfterContent: 0.04,
     );
   }
 }

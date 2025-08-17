@@ -3,8 +3,8 @@ import 'package:fruit_market/common/widgets/app_name_widget.dart';
 import 'package:fruit_market/common/widgets/auth_switch_text.dart';
 import 'package:fruit_market/core/constants/app_sizes.dart';
 import 'package:fruit_market/core/models/auth_switch_data.dart';
-import 'package:fruit_market/core/utils/device/device_utils.dart';
 import 'package:fruit_market/core/utils/device/extensions/navigation_extension.dart';
+import 'package:fruit_market/core/utils/responsive/widgets/responsive_gap.dart';
 import 'package:fruit_market/core/utils/responsive/widgets/responsive_text.dart';
 
 /// A reusable authentication screen template widget.
@@ -52,8 +52,8 @@ class AuthTemplate extends StatelessWidget {
     this.showBack = true,
     this.switchData,
     this.backIcon,
-    this.spaceAfterContent = 0.075,
-    this.spaceBeforeContent = 0.04,
+    this.spaceAfterContent = 35.0,
+    this.spaceBeforeContent = 30.0,
     this.backSceenRoute,
   });
 
@@ -118,7 +118,8 @@ class AuthTemplate extends StatelessWidget {
                 ),
               ),
             ),
-          SizedBox(height: DeviceUtils.screenHeight(context) * 0.04),
+          //SizedBox(height: DeviceUtils.screenHeight(context) * 0.04),
+          ResponsiveGap.vertical(37.0),
 
           // Main content padding
           Padding(
@@ -129,30 +130,34 @@ class AuthTemplate extends StatelessWidget {
               children: [
                 // App name (header)
                 const AppNameWidget(),
-                const SizedBox(height: AppSizes.authSpaceItem),
+                //const SizedBox(height: AppSizes.authSpaceItem),
+                ResponsiveGap.vertical(AppSizes.authSpaceItem),
 
                 // Page title
                 ResponsiveText(
                   title,
                   baseStyle: Theme.of(context).textTheme.headlineSmall,
                 ),
-                SizedBox(
-                  height:
-                      DeviceUtils.screenHeight(context) * spaceBeforeContent,
-                ),
+                // SizedBox(
+                //   height:
+                //       DeviceUtils.screenHeight(context) * spaceBeforeContent,
+                // ),
+                ResponsiveGap.vertical(spaceBeforeContent),
 
                 // Screen-specific content
                 content,
-                SizedBox(
-                  height: DeviceUtils.screenHeight(context) * spaceAfterContent,
-                ),
+                // SizedBox(
+                //   height: DeviceUtils.screenHeight(context) * spaceAfterContent,
+                // ),
+                ResponsiveGap.vertical(spaceAfterContent),
 
                 // Auth switch text like(Sign in / Sign up)
                 if (switchData != null) AuthSwitchText(data: switchData!),
 
                 // Footer (optional)
                 if (footer != null) ...[
-                  SizedBox(height: DeviceUtils.screenHeight(context) * 0.06),
+                  //SizedBox(height: DeviceUtils.screenHeight(context) * 0.06),
+                  ResponsiveGap.vertical(56.0),
                   footer!,
                 ],
               ],
