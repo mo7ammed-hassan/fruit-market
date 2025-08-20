@@ -42,4 +42,9 @@ class AppStrings {
   static const String otpText = 'Enter Received OTP';
   static const String notReceived = 'Not received? ';
   static const String sendAgain = 'Send Again';
+
+  static const String sallers = 'Sallers';
+  static const String showAll = 'Show All';
+
+  static const String sellerName = 'Seller Name';
 }

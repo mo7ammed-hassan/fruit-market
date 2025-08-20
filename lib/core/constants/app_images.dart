@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
   AppImages._();
-  
+
   /// Assets for iconsCanceled
   /// assets/icons/canceled.svg
   static const String iconsCanceled = "assets/icons/canceled.svg";
@@ -62,6 +62,10 @@ class AppImages {
   /// assets/icons/logo.svg
   static const String iconsLogo = "assets/icons/logo.svg";
 
+  /// Assets for iconsMenu
+  /// assets/icons/menu.svg
+  static const String iconsMenu = "assets/icons/menu.svg";
+
   /// Assets for iconsMore
   /// assets/icons/more.svg
   static const String iconsMore = "assets/icons/more.svg";
@@ -77,6 +81,10 @@ class AppImages {
   /// Assets for iconsPhoneIcon
   /// assets/icons/phone_icon.svg
   static const String iconsPhoneIcon = "assets/icons/phone_icon.svg";
+
+  /// Assets for iconsSeach
+  /// assets/icons/seach.svg
+  static const String iconsSeach = "assets/icons/seach.svg";
 
   /// Assets for iconsVehicle
   /// assets/icons/vehicle.svg
@@ -118,6 +126,10 @@ class AppImages {
   /// assets/images/category_4.svg
   static const String imagesCategory4 = "assets/images/category_4.svg";
 
+  /// Assets for imagesFruitBanner
+  /// assets/images/fruit-banner.jpg
+  static const String imagesFruitBanner = "assets/images/fruit-banner.jpg";
+
   /// Assets for imagesLogo
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
@@ -128,11 +140,13 @@ class AppImages {
 
   /// Assets for imagesPaymentFailure
   /// assets/images/payment_failure.svg
-  static const String imagesPaymentFailure = "assets/images/payment_failure.svg";
+  static const String imagesPaymentFailure =
+      "assets/images/payment_failure.svg";
 
   /// Assets for imagesPaymentSuccess
   /// assets/images/payment_success.svg
-  static const String imagesPaymentSuccess = "assets/images/payment_success.svg";
+  static const String imagesPaymentSuccess =
+      "assets/images/payment_success.svg";
 
   /// Assets for imagesProductImage
   /// assets/images/product_image.png
@@ -141,5 +155,6 @@ class AppImages {
   /// Assets for imagesSallerImage
   /// assets/images/saller_image.svg
   static const String imagesSallerImage = "assets/images/saller_image.svg";
-}
 
+  static const String imagesCategory = 'assets/images/category';
+}

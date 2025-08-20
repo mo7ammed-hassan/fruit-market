@@ -10,8 +10,10 @@ import 'package:fruit_market/features/auth/presentation/screens/phone_screen.dar
 import 'package:fruit_market/features/auth/presentation/screens/signup_screen.dart';
 import 'package:fruit_market/features/auth/presentation/screens/otp_verification_screen.dart';
 import 'package:fruit_market/features/auth/presentation/screens/welcome_screen.dart';
+import 'package:fruit_market/features/home/presentation/screens/home_screen.dart';
 import 'package:fruit_market/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:fruit_market/features/splash/splash_screen.dart';
+import 'package:fruit_market/navigation_screen.dart';
 
 class AppRouter {
   const AppRouter();
@@ -28,7 +30,6 @@ class AppRouter {
     Routes.phoneScreen: (_) => const PhoneScreen(),
     Routes.otpVerificationScreen: (_) => const OtpVerificationScreen(),
 
-
     // Routes.resetPasswordScreen: (_) => BlocProvider(
     //   create: (context) => ResetPasswordCubit(),
     //   child: const ResetPasswordScreen(),
@@ -40,8 +41,8 @@ class AppRouter {
     // Routes.otpVerificationScreen: (_) => const OtpScreen(),
 
     // /// --- Navigation Screen ---
-    // Routes.navigationScreen: (_) => const NavigationScreen(),
-    // Routes.eventHomeScreen: (_) => const EventHomeScreen(),
+    Routes.navigationScreen: (_) => const NavigationScreen(),
+    Routes.homeScreen: (_) => const HomeScreen(),
     // Routes.searchScreen: (_) => const SearchSecreen(),
     // Routes.scheduleScreen: (_) => const ScheduleScreen(),
     // Routes.createEventScreen: (_) => const CreateEventScreen(),

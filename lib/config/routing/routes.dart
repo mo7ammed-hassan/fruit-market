@@ -17,7 +17,7 @@ class Routes {
 
   /// --- Navigation Screens --- ///
   static const String navigationScreen = '/navigationScreen';
-  static const String eventHomeScreen = '/eventHomeScreen';
+  static const String homeScreen = '/homeScreen';
   static const String searchScreen = '/searchScreen';
   static const String createEventScreen = '/createEventScreen';
   static const String scheduleScreen = '/scheduleScreen';

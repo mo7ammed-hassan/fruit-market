@@ -25,8 +25,8 @@ class ResponsiveText extends StatelessWidget {
     this.textAlign,
     this.minScale = 0.8,
     this.maxScale = 1.2,
-    this.maxLines,
-    this.overflow,
+    this.maxLines = 1,
+    this.overflow = TextOverflow.ellipsis,
     this.baseStyle,
   });
 
