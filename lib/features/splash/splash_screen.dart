@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen>
     );
 
     _logoSlide = Tween<Offset>(
-      begin: const Offset(0, -0.2),
+      begin: const Offset(0, -0.4),
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
 
@@ -71,16 +71,21 @@ class _SplashScreenState extends State<SplashScreen>
       body: FadeTransition(
         opacity: _opacity,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Spacer(),
-            SlideTransition(
-              position: _logoSlide,
-              child: Image.asset(AppImages.imagesLogo),
+            Center(
+              child: SlideTransition(
+                position: _logoSlide,
+                child: Image.asset(AppImages.imagesLogo),
+              ),
             ),
             const Spacer(),
-            SlideTransition(
-              position: _bottomSlide,
-              child: Image.asset(AppImages.imagesBottomSplash),
+            Center(
+              child: SlideTransition(
+                position: _bottomSlide,
+                child: Image.asset(AppImages.imagesBottomSplash),
+              ),
             ),
           ],
         ),
