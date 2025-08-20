@@ -15,7 +15,7 @@ class SellersSection extends StatelessWidget {
         itemCount: 3,
         itemBuilder: (context, index) => SellerCard(),
         separatorBuilder: (context, index) =>
-            const SizedBox(height: AppSizes.sellerCardSpacing),
+            const SizedBox(height: AppSizes.sellerCardSpacing - 2),
       ),
     );
   }
