@@ -8,4 +8,6 @@ class DeviceUtils {
   static double screenWidth(context) => MediaQuery.of(context).size.width;
   static double screenHeight(context) => MediaQuery.of(context).size.height;
 
+  static bool isPortrait(context) =>
+      MediaQuery.of(context).orientation == Orientation.portrait;
 }

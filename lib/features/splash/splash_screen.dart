@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_market/config/routing/app_router.dart';
 import 'package:fruit_market/core/constants/app_colors.dart';
 import 'package:fruit_market/core/constants/app_images.dart';
+import 'package:fruit_market/core/utils/device/device_utils.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -81,12 +82,13 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ),
             const Spacer(),
-            Center(
-              child: SlideTransition(
-                position: _bottomSlide,
-                child: Image.asset(AppImages.imagesBottomSplash),
+            if (DeviceUtils.isPortrait(context))
+              Center(
+                child: SlideTransition(
+                  position: _bottomSlide,
+                  child: Image.asset(AppImages.imagesBottomSplash),
+                ),
               ),
-            ),
           ],
         ),
       ),
